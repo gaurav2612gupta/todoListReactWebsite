@@ -1,13 +1,147 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  font-family: 'Century Gothic';
+}
+.modal {
+  margin-top: 4rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 5px;
+  color: #333;
+  font-family: sans-serif;
+  line-height: 1.5;
+  max-width: 50%;
+  /* padding: 1rem 2rem; */
+  width: 25rem;
+  height: 35rem;
+  border-radius: 5%;
+  text-align: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .modal {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);  
+  }
+  .warning {
+    display: none;
+  }
+}
+
+html,
+body {
+  height: auto;
+  width: auto;
+}
+body {
+  background-image: url('https://cdn.pixabay.com/photo/2016/12/16/15/25/christmas-1911637_960_720.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+h1{
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+  
+}
+.inner{
+  display: flex;
+}
+input{
+  width: 70%;
+  margin-top: 1rem;
+  margin: 1rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1.7rem;
+  background: transparent;
+  outline: none;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid rgb(39, 39, 39);
+}
+button{
+  /* min-height: 3rem; */
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  font-weight: 500;
+  border-color: transparent;
+  background-color: #c2855c;
+  color: #fff;
+  font-size: 2.5rem;
+  border: none;
+  outline: none;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+button:hover{
+  background-color: rgb(8, 194, 64);
+  transform: scale(1.1);
+}
+.todo{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin: auto;
+  margin-left: 4rem;
+}
+.todo li{
+  font-size: 1.5rem;
+  margin-left: 4rem;
+  list-style: none;
+  text-align: center;
+}
+.todo i{
+  cursor: pointer;
+  margin-left: -4rem;
+  margin-right: 2rem;
+  margin-top: 10px;
+}
+.todo i:hover{
+  transform: scale(1.5);
+  color: rgb(255, 77, 77);
+}
+
+@media screen and (max-width: 480px) {
+  body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    margin-top: 10vh;
+  }
+  .modal{
+    height: 70vh;
+    max-width: 80%;
+    margin: auto;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  input{
+    font-size: 1.2rem;
+  }
+  button{
+    font-size: 1.8rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-top: 0.8rem;
+  }
+  .todo li{
+    font-size: 1.2rem;
+  }
+  .todo i{
+    font-size: 0.8rem;
+    margin-right: 1rem;
+  }
 }
